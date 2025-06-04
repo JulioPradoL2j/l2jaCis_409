@@ -125,7 +125,7 @@ public class PartyFarmEvent
 	{
 		for (Spawn spawn : activeSpawns)
 		{
-			if (spawn != null && spawn.getSpawnData() != null)
+			if (spawn != null)
 				spawn.doDelete();
 			
 
