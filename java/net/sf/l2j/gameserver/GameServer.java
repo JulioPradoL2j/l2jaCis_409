@@ -49,6 +49,7 @@ import net.sf.l2j.gameserver.data.xml.BoatData;
 import net.sf.l2j.gameserver.data.xml.ClanHallDecoData;
 import net.sf.l2j.gameserver.data.xml.DoorData;
 import net.sf.l2j.gameserver.data.xml.FishData;
+import net.sf.l2j.gameserver.data.xml.GreetingData;
 import net.sf.l2j.gameserver.data.xml.HealSpsData;
 import net.sf.l2j.gameserver.data.xml.HennaData;
 import net.sf.l2j.gameserver.data.xml.InstantTeleportData;
@@ -258,7 +259,12 @@ public class GameServer
 		
 		StringUtil.printSection("Spawns");
 		SpawnManager.getInstance().spawn();
+		
+		StringUtil.printSection("Party Farm");
 		PartyFarmData.getInstance();
+		
+		StringUtil.printSection("Greeting Data");
+		GreetingData.getInstance();
 		
 		StringUtil.printSection("Handlers");
 		LOGGER.info("Loaded {} admin command handlers.", AdminCommandHandler.getInstance().size());
